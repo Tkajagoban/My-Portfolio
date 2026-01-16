@@ -1,0 +1,139 @@
+/* About Section Styles */
+.about {
+  background-color: #ffffff;
+  padding: 80px 20px;
+  width: 100%;
+  min-width: 100vw;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-theme="dark"] .about {
+  background-color: #0f172a;
+  color: #f1f5f9;
+}
+
+
+.about-container {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Section Title */
+.about-title {
+  font-size: 26px;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin: 0 0 8px 0;
+  text-align: center;
+  position: relative;
+}
+
+[data-theme="dark"] .about-title {
+  color: #f1f5f9;
+}
+
+.about-title::after {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 3px;
+  background-color: #475569;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Profile Image */
+.about-image-wrapper {
+  margin: 32px 0;
+}
+
+.about-profile-img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  display: block;
+}
+
+/* Text Content */
+.about-text {
+
+  max-width: 580px;
+  text-align: center;
+}
+
+.about-text p {
+  font-size: 16px;
+  color: rgb(37, 37, 38);
+  line-height: 1.85;
+  margin: 0 0 20px 0;
+}
+
+[data-theme="dark"] .about-text p {
+  color: #ffffff;
+}
+
+.about-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive - Tablet */
+@media (max-width: 768px) {
+  .about {
+    padding: 60px 16px;
+  }
+
+  .about-title {
+    font-size: 24px;
+  }
+
+  .about-image-wrapper {
+    margin: 28px 0;
+  }
+
+  .about-profile-img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+
+  .about-text p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 480px) {
+  .about {
+    padding: 48px 16px;
+  }
+
+  .about-title {
+    font-size: 22px;
+  }
+
+  .about-image-wrapper {
+    margin: 24px 0;
+  }
+
+  .about-profile-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .about-text p {
+    font-size: 13px;
+    line-height: 1.75;
+    margin-bottom: 16px;
+  }
+}

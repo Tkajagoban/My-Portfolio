@@ -1,0 +1,249 @@
+/* Hero Section Styles */
+.hero {
+  background-color: #f8fafc;
+  padding: 120px 0 100px 0;
+  margin-top: 60px;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+[data-theme="dark"] .hero {
+  background-color: #1e293b;
+}
+
+.hero .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* Left Side - Content */
+.hero-content {
+  flex: 1;
+  max-width: 550px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 24px 0;
+  color: #1e293b;
+  letter-spacing: -0.5px;
+}
+
+[data-theme="dark"] .hero-content h1 {
+  color: #f1f5f9;
+}
+
+.hero-content h1 .highlight {
+  color: #0f766e;
+}
+
+.hero-content p {
+  font-size: 16px;
+  color: #64748b;
+  line-height: 1.7;
+  margin: 0 0 32px 0;
+  max-width: 400px;
+}
+
+[data-theme="dark"] .hero-content p {
+  color: #cbd5e1;
+}
+
+.hero-btn {
+  background-color: #0f766e;
+  color: rgb(255, 255, 255);
+  padding: 14px 32px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(15, 118, 110, 0.3);
+}
+
+.hero-btn a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.hero-btn:hover {
+  background-color: #0d9488;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(15, 118, 110, 0.4);
+}
+
+.hero-btn:active {
+  transform: translateY(0);
+}
+
+/* Hero Buttons Container */
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Right Side - Illustration Card */
+.hero-image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.hero-image-card {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.02),
+    0 12px 40px rgba(0, 0, 0, 0.06),
+    0 0 25px rgba(148, 163, 184, 0.5),
+    0 0 50px rgba(148, 163, 184, 0.25);
+  max-width: 350px;
+  width: 100%;
+  animation: float 5s ease-in-out infinite;
+}
+
+.hero-image-card img {
+  width: 100%;
+  max-height: 480px;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Floating Animation */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Responsive - Tablet */
+@media (max-width: 1024px) {
+  .hero .container {
+    gap: 40px;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+  }
+
+  .hero-image-card {
+    max-width: 350px;
+    padding: 20px;
+  }
+}
+
+/* Responsive - Mobile & Tablet Portrait */
+@media (max-width: 768px) {
+  .hero {
+    padding: 80px 0 80px 0;
+    margin-top: 40px;
+    min-height: auto;
+  }
+
+  .hero .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-content h1 br {
+    display: none;
+  }
+
+  .hero-content p {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-image-wrapper {
+    justify-content: center;
+    order: -1;
+    margin-bottom: 40px;
+  }
+
+  .hero-image-card {
+    max-width: 320px;
+    padding: 16px;
+  }
+}
+
+/* Responsive - Small Mobile */
+@media (max-width: 480px) {
+  .hero {
+    padding: 40px 0 60px 0;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  .hero-btn {
+    padding: 12px 28px;
+    font-size: 14px;
+  }
+
+  .hero-image-card {
+    max-width: 280px;
+    padding: 14px;
+  }
+}
+
+.outline-btn {
+  background-color: #0f766e;
+  color: #ffffff;
+  padding: 14px 32px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(15, 118, 110, 0.3);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.outline-btn:hover {
+  background-color: #0d9488;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(15, 118, 110, 0.4);
+}
+
+.outline-btn:visited,
+.outline-btn:active,
+.outline-btn:focus {
+  color: #ffffff;
+}

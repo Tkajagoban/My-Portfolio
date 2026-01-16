@@ -1,0 +1,151 @@
+/* Skills Section Styles */
+.skills {
+    background-color: #f8fafc;
+    padding: 80px 20px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+[data-theme="dark"] .skills {
+    background-color: #0f172a;
+}
+
+.skills-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Section Title */
+.skills-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #1a1a2e;
+    text-align: center;
+    margin: 0 0 12px 0;
+    position: relative;
+}
+
+[data-theme="dark"] .skills-title {
+    color: #f1f5f9;
+}
+
+.skills-title::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #475569;
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+}
+
+/* Skill Card */
+.skill-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 28px 24px;
+    text-align: center;
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.04),
+        0 0 15px rgba(148, 163, 184, 0.4),
+        0 0 30px rgba(148, 163, 184, 0.2);
+    border: 1px solid #f1f5f9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+[data-theme="dark"] .skill-card {
+    background-color: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.skill-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Skill Icon */
+.skill-icon {
+    font-size: 32px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background-color: #eff6ff;
+    border-radius: 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Skill Title */
+.skill-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0 0 10px 0;
+}
+
+[data-theme="dark"] .skill-name {
+    color: #f1f5f9;
+}
+
+/* Skill Description */
+.skill-description {
+    font-size: 13px;
+    color: #b2c2d9ff;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Responsive - Tablet */
+@media (max-width: 1024px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 600px) {
+    .skills {
+        padding: 60px 16px;
+    }
+
+    .skills-title {
+        font-size: 24px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 36px;
+    }
+
+    .skill-card {
+        padding: 24px 20px;
+    }
+
+    .skill-icon {
+        font-size: 28px;
+        width: 48px;
+        height: 48px;
+    }
+
+    .skill-name {
+        font-size: 15px;
+    }
+
+    .skill-description {
+        font-size: 13px;
+    }
+}
